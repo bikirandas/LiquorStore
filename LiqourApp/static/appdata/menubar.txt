@@ -1,2 +1,0 @@
-{'header_list' : [('About Us', '/home/'), ('Disclaimer','/admin/'), ('Locate','/locate/'), ('Order Now', '#'), ('Login', '#'), ('Register', '/accounts/register/')]}
-{'sidebar_list' : [('Special Offers','/admin/'), ('Store Near You','#'), ('Special Offers','/admin/'),]}
