@@ -32,8 +32,8 @@ h1 {
   font-size: 28px;
 }
 
-input[type="text"],
-input[type="password"] {
+button[type="text"],
+button[type="password"] {
   display: block;
   box-sizing: border-box;
   margin-bottom: 20px;
@@ -48,14 +48,14 @@ input[type="password"] {
   transition: 0.2s ease;
 }
 
-input[type="text"]:focus,
-input[type="password"]:focus {
+button[type="text"]:focus,
+button[type="password"]:focus {
   border-bottom: 2px solid #16a085;
   color: #16a085;
   transition: 0.2s ease;
 }
 
-input[type="submit"] {
+button[type="submit"] {
   margin-top: 28px;
   width: 120px;
   height: 32px;
@@ -70,14 +70,14 @@ input[type="submit"] {
   cursor: pointer;
 }
 
-input[type="submit"]:hover,
-input[type="submit"]:focus {
+button[type="submit"]:hover,
+button[type="submit"]:focus {
   opacity: 0.8;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
   transition: 0.1s ease;
 }
 
-input[type="submit"]:active {
+button[type="submit"]:active {
   opacity: 1;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
   transition: 0.1s ease;
