@@ -1,0 +1,71 @@
+<application>
+  <component name="ProjectJdkTable">
+    <jdk version="2">
+      <name value="Python 3.5.2 (C:\Python\Python35\python.exe)" />
+      <type value="Python SDK" />
+      <version value="Python 3.5.2" />
+      <homePath value="C:\Python\Python35\python.exe" />
+      <roots>
+        <classPath>
+          <root type="composite">
+            <root type="simple" url="file://C:/Python/Python35/DLLs" />
+            <root type="simple" url="file://C:/Python/Python35/Lib" />
+            <root type="simple" url="file://C:/Python/Python35" />
+            <root type="simple" url="file://$USER_HOME$/AppData/Roaming/Python/Python35/site-packages" />
+            <root type="simple" url="file://$USER_HOME$/AppData/Roaming/Python/Python35/site-packages/win32" />
+            <root type="simple" url="file://$USER_HOME$/AppData/Roaming/Python/Python35/site-packages/win32/lib" />
+            <root type="simple" url="file://$USER_HOME$/AppData/Roaming/Python/Python35/site-packages/pythonwin" />
+            <root type="simple" url="file://C:/Python/Python35/Lib/site-packages" />
+            <root type="simple" url="file://$USER_HOME$/.PyCharm2017.1/system/python_stubs/-1468023946" />
+            <root type="simple" url="file://$APPLICATION_HOME_DIR$/helpers/python-skeletons" />
+            <root type="simple" url="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3.5" />
+            <root type="simple" url="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3.4" />
+            <root type="simple" url="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3.3" />
+            <root type="simple" url="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3" />
+            <root type="simple" url="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/2and3" />
+            <root type="simple" url="file://$APPLICATION_HOME_DIR$/helpers/typeshed/third_party/3" />
+            <root type="simple" url="file://$APPLICATION_HOME_DIR$/helpers/typeshed/third_party/2and3" />
+          </root>
+        </classPath>
+        <sourcePath>
+          <root type="composite" />
+        </sourcePath>
+      </roots>
+      <additional />
+    </jdk>
+    <jdk version="2">
+      <name value="Python 3.6.0 (C:\Python\Python36\python.exe)" />
+      <type value="Python SDK" />
+      <version value="Python 3.6.0" />
+      <homePath value="C:\Python\Python36\python.exe" />
+      <roots>
+        <classPath>
+          <root type="composite">
+            <root type="simple" url="file://C:/Python/Python36/DLLs" />
+            <root type="simple" url="file://C:/Python/Python36/Lib" />
+            <root type="simple" url="file://C:/Python/Python36" />
+            <root type="simple" url="file://$USER_HOME$/AppData/Roaming/Python/Python36/site-packages" />
+            <root type="simple" url="file://$USER_HOME$/AppData/Roaming/Python/Python36/site-packages/win32" />
+            <root type="simple" url="file://$USER_HOME$/AppData/Roaming/Python/Python36/site-packages/win32/lib" />
+            <root type="simple" url="file://$USER_HOME$/AppData/Roaming/Python/Python36/site-packages/pythonwin" />
+            <root type="simple" url="file://C:/Python/Python36/Lib/site-packages" />
+            <root type="simple" url="file://$USER_HOME$/.PyCharm2017.1/system/python_stubs/-1338941227" />
+            <root type="simple" url="file://$APPLICATION_HOME_DIR$/helpers/python-skeletons" />
+            <root type="simple" url="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3.6" />
+            <root type="simple" url="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3.5" />
+            <root type="simple" url="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3.4" />
+            <root type="simple" url="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3.3" />
+            <root type="simple" url="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3" />
+            <root type="simple" url="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/2and3" />
+            <root type="simple" url="file://$APPLICATION_HOME_DIR$/helpers/typeshed/third_party/3" />
+            <root type="simple" url="file://$APPLICATION_HOME_DIR$/helpers/typeshed/third_party/2and3" />
+          </root>
+        </classPath>
+        <sourcePath>
+          <root type="composite" />
+        </sourcePath>
+      </roots>
+      <additional />
+    </jdk>
+  </component>
+</application>
