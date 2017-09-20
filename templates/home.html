@@ -1,0 +1,23 @@
+{% extends '__header.html' %}
+{% load staticfiles %}
+{% load static %}
+{# Load the tag library #}
+{% load bootstrap3 %}
+{% block stylesheet %}
+    <link href="{% static 'css/home.css' %}" rel="stylesheet"/>
+{% endblock %}
+
+{% block content %}
+{##}
+
+<div class="search-bar col-lg-12">
+    <form action="/admin/">
+        <input type="text" name="search" class="search-input" placeholder="Search">
+        <button type="submit" value="search" class="search-button">
+            <i class="glyphicon glyphicon-search"></i>
+        </button>
+    </form>
+</div>
+
+
+{% endblock %}
