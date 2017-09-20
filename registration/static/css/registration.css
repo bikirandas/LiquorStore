@@ -32,8 +32,8 @@ h1 {
   font-size: 28px;
 }
 
-button[type="text"],
-button[type="password"] {
+tr [type="text"],
+tr [type="password"] {
   display: block;
   box-sizing: border-box;
   margin-bottom: 20px;
@@ -48,8 +48,8 @@ button[type="password"] {
   transition: 0.2s ease;
 }
 
-button[type="text"]:focus,
-button[type="password"]:focus {
+tr [type="text"]:focus,
+tr [type="password"]:focus {
   border-bottom: 2px solid #16a085;
   color: #16a085;
   transition: 0.2s ease;
