@@ -5,7 +5,7 @@ from django.db.models.signals import post_save
 
 class UserProfileManager(models.Manager):
     def get_queryset(self):
-        return super(UserProfileManager, self).get_queryset().filter(city='Delhi')
+        return super(UserProfileManager, self).get_queryset().filter(user='')
 
 
 class UserProfile(models.Model):
