@@ -5,7 +5,7 @@ from django.db.models.signals import post_save
 
 class UserProfileManager(models.Manager):
     def get_queryset(self):
-        return super(UserProfileManager, self).get_queryset().filter(user='')
+        return super(UserProfileManager, self).get_queryset()
 
 
 class UserProfile(models.Model):
@@ -14,7 +14,7 @@ class UserProfile(models.Model):
     phone = models.IntegerField(default=0)
     image = models.ImageField(upload_to='profile_image', blank=True)
 
-    Delhi = UserProfileManager()
+    upm = UserProfileManager()
 
     def __str__(self):
         return self.user.username
