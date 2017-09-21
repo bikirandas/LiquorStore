@@ -12,7 +12,7 @@ class UserProfile(models.Model):
     user = models.OneToOneField(User)
     email = models.EmailField(max_length=50, blank=False)
     phone = models.IntegerField(default=0)
-    image = models.ImageField(upload_to='profile_image', blank=True)
+    image = models.ImageField(upload_to='registration/profile_image', blank=True)
 
     upm = UserProfileManager()
 
@@ -21,6 +21,7 @@ class UserProfile(models.Model):
 
 
 def create_profile(sender, **kwargs):
+    print(sender)
     if kwargs['created']:
         user_profile = UserProfile.objects.create(user=kwargs['instance'])
 

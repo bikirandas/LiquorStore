@@ -1,0 +1,32 @@
+{% extends '__header.html' %}
+{% load staticfiles %}
+{% load static %}
+{# Load the tag library #}
+{% load bootstrap3 %}
+{% block stylesheet %}
+    <link href="{% static 'css/home.css' %}" rel="stylesheet"/>
+    <link href="{% static 'css/registration.css' %}" rel="stylesheet"/>
+{% endblock %}
+
+
+{% block content %}
+    <div id="login-box">
+        <div class="left">
+            {% if registered %}
+                <h1>Thanks you for Registration</h1>
+            {% else %}
+                <h1>Sign Up Successful</h1>
+                <h3>User Added to Database</h3>
+
+            {% endif %}
+        </div>
+        <div class="right">
+            <span class="loginwith">Sign in with<br />social network</span>
+
+            <button class="social-signin facebook">Log in with facebook</button>
+            <button class="social-signin twitter">Log in with Twitter</button>
+            <button class="social-signin google">Log in with Google+</button>
+        </div>
+        <div class="or">OR</div>
+    </div>
+{% endblock %}
