@@ -3,10 +3,10 @@ from .models import UserProfile
 
 
 class UserProfileAdmin(admin.ModelAdmin):
-    list_display = ('user', 'email', 'phone')
+    list_display = ('user', 'email', 'phone', 'user_info')
 
     def user_info(self, obj):
-        return obj.user
+        return obj.email
 
     def get_queryset(self, request):
         queryset = super(UserProfileAdmin, self).get_queryset(request)
