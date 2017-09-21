@@ -14,13 +14,11 @@ def register(request):
     head_list = read_file(base_dir)
     if request.method == 'POST':
         form = RegistrationForm(request.POST)
-        print(str(form))
         if form.is_valid():
             print(str(form))
-            print(form.is_valid())
             form.save()
-            # return redirect(reverse('accounts:home'))
-            return render(request,'registered.html', head_list)
+            return redirect('/register/')
+            # return render(request, 'registered.html', head_list)
     else:
         form = RegistrationForm()
         print(str(form))

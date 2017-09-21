@@ -5,13 +5,14 @@ from django.db.models.signals import post_save
 
 class UserProfileManager(models.Manager):
     def get_queryset(self):
-        return super(UserProfileManager, self).get_queryset()
+        return super(UserProfileManager, self).get_queryset().filter(city='Delhi')
 
 
 class UserProfile(models.Model):
-    user = models.OneToOneField(User)
+    user = models.OneToOneField(User, unique=True)
     email = models.EmailField(max_length=50, blank=False)
-    phone = models.IntegerField(default=0)
+    phone = models.IntegerField(default=0, null=True)
+    city = models.CharField(max_length=20, null=True)
     image = models.ImageField(upload_to='registration/profile_image', blank=True)
 
     upm = UserProfileManager()
@@ -21,8 +22,9 @@ class UserProfile(models.Model):
 
 
 def create_profile(sender, **kwargs):
-    print(sender)
+    # print(sender)
     if kwargs['created']:
         user_profile = UserProfile.objects.create(user=kwargs['instance'])
+        # UserProfile.objects.create(user=kwargs['instance'])
 
 post_save.connect(create_profile, sender=User)
