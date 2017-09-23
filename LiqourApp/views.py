@@ -29,9 +29,9 @@ def location_view(request):
     return render(request, 'location.html', head_list)
 
 
-# def register(request):
-#     head_list = read_file('static/appdata/menubar.txt')
-#     return render(request, 'account.html', head_list, {'form': Profile()})
+def register(request):
+     head_list = read_file('static/appdata/menubar.txt')
+     return render(request, '../Accounts/templates/registration.html', head_list)
 
 
 def read_file(file_name):
