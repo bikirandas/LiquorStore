@@ -30,8 +30,8 @@ def location_view(request):
 
 
 def register(request):
-     head_list = read_file('static/appdata/menubar.txt')
-     return render(request, '../Accounts/templates/registration.html', head_list)
+    head_list = read_file('static/appdata/menubar.txt')
+    return render(request, 'registration.html', head_list)
 
 
 def read_file(file_name):
