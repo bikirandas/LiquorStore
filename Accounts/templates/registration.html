@@ -19,8 +19,10 @@
                 <h3>Just fill out the form</h3>
                 <form method="post">
                 {% csrf_token %}
-                    {{ form.as_p }}
+                    {{ reg_form.as_p }}
+                    {{ profile_form.as_p }}
                     <button type="submit">Submit</button>
+
                     {% comment %}<input type="text" name="username" placeholder="Username" />
                     <input type="text" name="email" placeholder="E-mail" />
                     <input type="text" name="first_name" placeholder="First Name" />
