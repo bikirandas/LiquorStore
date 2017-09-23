@@ -15,11 +15,10 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
-from LiqourApp.views import index, home, location_view
+from LiqourApp.views import index, home, location_view, register
 from django.conf.urls.static import static
 from django.conf import settings
-from account import views
-from account.views import register
+
 
 app_name = 'account'
 urlpatterns = [
@@ -27,7 +26,6 @@ urlpatterns = [
     url(r'^$', index),
     url(r'^home/', home),
     url(r'^locate/', location_view),
-    url(r'^', include('registration.urls', namespace='register')),
-    # url(r'^register/', register, name='register'),
+    url(r'^register/', register, name='register'),
     url(r'^admin/', include(admin.site.urls)),
     ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

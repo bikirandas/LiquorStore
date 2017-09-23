@@ -40,9 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'LiqourApp',
     'bootstrap3',
-    'registration',
-
-]
+    ]
 
 MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',
@@ -70,7 +68,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [os.path.join(BASE_DIR, 'templates'), os.path.join(BASE_DIR, 'LiqourApp/templates'),
-                 os.path.join(BASE_DIR, 'account/templates')],
+                 os.path.join(BASE_DIR, 'Accounts/templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -140,7 +138,7 @@ STATIC_ROOT = ''
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
     os.path.join(BASE_DIR, 'LiqourApp\static'),
-    os.path.join(BASE_DIR, 'account\static'),
+    os.path.join(BASE_DIR, 'Accounts\static'),
 )
 
 # Google Maps API
