@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'LiqourApp',
     'bootstrap3',
+    'Accounts',
     ]
 
 MIDDLEWARE_CLASSES = [
