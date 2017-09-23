@@ -70,7 +70,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [os.path.join(BASE_DIR, 'templates'), os.path.join(BASE_DIR, 'LiqourApp/templates'),
-                 os.path.join(BASE_DIR, 'registration/templates')],
+                 os.path.join(BASE_DIR, 'account/templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -140,9 +140,12 @@ STATIC_ROOT = ''
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
     os.path.join(BASE_DIR, 'LiqourApp\static'),
-    os.path.join(BASE_DIR, 'registration\static'),
+    os.path.join(BASE_DIR, 'account\static'),
 )
 
 # Google Maps API
 GEOPOSITION_GOOGLE_MAPS_API_KEY = 'AIzaSyApXHf3jA8pQR9_O5J4ty-cKpd7JvkuWeA'
 AUTH_USER_MODEL = 'auth.User'
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'LiquorStore/media')
