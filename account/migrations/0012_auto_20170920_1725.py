@@ -9,7 +9,7 @@ import django.db.models.manager
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('registration', '0011_userprofile'),
+        ('account', '0011_userprofile'),
     ]
 
     operations = [

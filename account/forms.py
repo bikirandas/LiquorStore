@@ -17,6 +17,9 @@ class RegistrationForm(UserCreationForm):
         user.first_name = self.cleaned_data['first_name']
         user.last_name = self.cleaned_data['last_name']
         user.email = self.cleaned_data['email']
+        if user.email and User.objects.filter(email=user.email).exclude(username=user).exists():
+            raise forms.ValidationError(u'Email addresses must be unique.')
+        return user.email
 
         if commit:
             user.save()

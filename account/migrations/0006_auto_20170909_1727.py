@@ -8,7 +8,7 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('registration', '0005_profile_photo'),
+        ('account', '0005_profile_photo'),
     ]
 
     operations = [

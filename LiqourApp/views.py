@@ -1,5 +1,5 @@
 from django.shortcuts import render_to_response, render
-# from registration.models import Profile
+# from account.models import Profile
 # from django.http import HttpResponse
 from LiqourApp.apps import Locate
 # from django.views.generic import View
@@ -31,7 +31,7 @@ def location_view(request):
 
 # def register(request):
 #     head_list = read_file('static/appdata/menubar.txt')
-#     return render(request, 'registration.html', head_list, {'form': Profile()})
+#     return render(request, 'account.html', head_list, {'form': Profile()})
 
 
 def read_file(file_name):
