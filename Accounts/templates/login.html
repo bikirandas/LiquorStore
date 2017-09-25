@@ -1,0 +1,29 @@
+{% extends '__header.html' %}
+{% load staticfiles %}
+{% load static %}
+{# Load the tag library #}
+{% load bootstrap3 %}
+{% block stylesheet %}
+    <link href="{% static 'css/home.css' %}" rel="stylesheet"/>
+    <link href="{% static 'css/login.css' %}" rel="stylesheet"/>
+{% endblock %}
+
+{% block content %}
+    <section class="container">
+    <h1>LiquorApp Login Console</h1>
+        <div class="login">
+            <h1>Login to WebApp</h1>
+            <form method="post" action="user_login.html">
+                <p><input type="text" name="login" value="" placeholder="username or email"></p>
+                <p><input type="password" name="password" value="" placeholder="password"></p>
+                <p class="remember_me">
+                  <label>
+                    <input type="checkbox" name="remember_me" id="remember_me">
+                    Remember me on this computer
+                  </label>
+                </p>
+                <p class="submit"><input type="submit" name="commit" value="Login"></p>
+            </form>
+        </div>
+    </section>
+{% endblock %}
