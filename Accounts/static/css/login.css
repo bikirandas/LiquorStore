@@ -1,6 +1,81 @@
-h1{
+/*
+ * Copyright (c) 2012-2013 Thibaut Courouble
+ * http://www.cssflow.com
+ *
+ * Licensed under the MIT License:
+ * http://www.opensource.org/licenses/mit-license.php
+ */
+
+.container {
+    margin: 20px 300px auto;
+    width: 400px;
+    height: 400px;
+    font: 13px/20px 'Lucida Grande', Tahoma, Verdana, sans-serif;
+    color: #404040;
+    background: #4a8cd2;
     text-align: center;
 }
-.form-control{
-    display: list-item;
+
+.login {
+    position: inherit;
+    margin: 30px auto;
+    padding: 20px 20px 20px;
+    width: 310px;
+    background: #d6ffc8;
+    border-radius: 3px;
+@include box-shadow(0 0 200px rgba(white, .5), 0 1 px 2 px rgba(black, .3));
 }
+
+.login:before {
+        content: '';
+        position: absolute;
+        top: -8px;
+        right: -8px;
+        bottom: -8px;
+        left: -8px;
+        z-index: -1;
+        background: rgba(0, 0, 0, 0.08);
+        border-radius: 4px;
+}
+
+
+
+.login h1 {
+    margin: -20px -20px 21px;
+    line-height: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #4a8cd2;
+    text-align: center;
+    text-shadow: 1px 1px black;
+    background: #d3dcf7;
+    border-bottom: 1px solid #cfcfcf;
+    border-radius: 3px 3px 0 0;
+    @include linear-gradient(top, whiteffd, #eef2f5);
+    @include box-shadow(0 1px #f5f5f5);
+}
+
+  p { margin: 20px 0 0; }
+  p:first-child { margin-top: 0; }
+
+  input[type=text], input[type=password] { width: 250px; }
+
+  p.remember_me {
+      float: left;
+      line-height: 31px;
+  }
+    label {
+      font-size: 12px;
+      color: #777;
+      cursor: pointer;
+    }
+
+    input {
+      position: relative;
+      bottom: 1px;
+      margin-right: 4px;
+      vertical-align: middle;
+    }
+
+
+  p.submit { text-align: right; }
