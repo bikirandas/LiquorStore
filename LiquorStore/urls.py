@@ -27,7 +27,9 @@ urlpatterns = [
     url(r'^home/', home),
     url(r'^locate/', location_view),
     url(r'^register/', register, name='register'),
+    # url(r'^user/login/', login_view, name='login'),
     url(r'^user/login/', login_view, name='login'),
+    url(r'^use_login/', login_view, name='user_login'),
     # url(r'^reg_success/', register_success),
     url(r'^admin/', include(admin.site.urls)),
     ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
