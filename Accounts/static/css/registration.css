@@ -116,8 +116,9 @@ button[type="submit"]:active {
   display: block;
   margin-bottom: 40px;
   font-size: 28px;
-  color: #FFF;
+  color: #000000;
   text-align: center;
+  font-weight: 300;
 }
 
 button.social-signin {
@@ -126,7 +127,7 @@ button.social-signin {
   height: 36px;
   border: none;
   border-radius: 2px;
-  color: #FFF;
+  color: #f7feff;
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
   transition: 0.2s ease;
