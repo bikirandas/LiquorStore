@@ -2,12 +2,13 @@ from django.shortcuts import render, redirect, render_to_response
 from .forms import RegistrationForm, UserProfileForm
 # from django.core.urlresolvers import reverse
 from django.contrib.auth import authenticate, login, logout
-# from django.contrib.auth.models import User
+from django.contrib.auth.models import User
 from django.http import HttpResponseRedirect, HttpResponse
 from LiqourApp.views import read_file
 from LiquorStore.settings import BASE_DIR
 import os
 from .models import UserProfile
+from django.template.context_processors import csrf
 from django.template import RequestContext
 # from django.contrib.auth.hashers import make_password
 
@@ -55,13 +56,16 @@ def register(request):
 
 
 def login_view(request):
+    params = {}
+    params.update(csrf(request))
     if request.method == 'POST':
         # First get the username and password supplied
-        username = request.POST.get('username')
-        password = request.POST.get('password')
+        username = request.POST.get('username', '')
+        password = request.POST.get('password', '')
         # Django's built-in authentication function:
         user = authenticate(username=username, password=password)
-        print(user)
+        
+        print('after aunthenticate', user)
         # If we have a user
         if user:
             # Check it the account is active
