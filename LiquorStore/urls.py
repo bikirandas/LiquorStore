@@ -19,6 +19,7 @@ from LiqourApp.views import index, home, location_view
 from django.conf.urls.static import static
 from django.conf import settings
 from Accounts.views import *
+from django.contrib.auth.views import login
 
 app_name = 'account'
 urlpatterns = [
@@ -31,5 +32,6 @@ urlpatterns = [
     url(r'^user/login/', login_view, name='login'),
     url(r'^user_login/', login_view, name='user_login'),
     # url(r'^reg_success/', register_success),
+    # url(r'^user_login/$', login, {'template_name': 'user_login.html'}),
     url(r'^admin/', include(admin.site.urls)),
     ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
