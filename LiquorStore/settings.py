@@ -54,9 +54,6 @@ MIDDLEWARE_CLASSES = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-AUTHENTICATION_BACKENDS = (
-        'django.contrib.auth.backends.ModelBackend',
-    )
 
 ROOT_URLCONF = 'LiquorStore.urls'
 
@@ -120,7 +117,8 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-#Authentication backends
+# Authentication backends
+
 AUTHENTICATION_BACKENDS = (
         'django.contrib.auth.backends.ModelBackend',
     )
