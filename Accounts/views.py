@@ -73,11 +73,11 @@ def login_view(request):
                 # Check it the account is active
                 if user.is_active:
                     # Log the user in.
-                    user.backend = 'django.contrib.auth.backends.ModelBackend'
                     login(request, username)
                     # Send the user back to some page.
+                    request.session['username'] = user
                     # In this case their homepage.
-                    # return HttpResponseRedirect(reverse('/user_login/'))
+                    # return HttpResponseRedirect(reverse('/home/'))
                     args = {'user': username}
                     head_list.update(args)
                     return render(request, 'user_profile.html', head_list)
@@ -98,6 +98,10 @@ def login_view(request):
 
 
 @login_required()
-def user_profile(request, username):
-    print('user after login')
+def user_profile(request):
+    logon = True
+    user = request.session.get('username')
+    print(user)
+    args = {'username': user, 'logon': logon}
+    head_list.update(args)
     return render(request, 'user_profile.html', head_list)
