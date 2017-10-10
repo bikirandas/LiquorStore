@@ -5,16 +5,11 @@
 {% load bootstrap3 %}
 {% block stylesheet %}
     <link href="{% static 'css/home.css' %}" rel="stylesheet"/>
-    <link href="{% static 'css/login.css' %}" rel="stylesheet"/>
+
 {% endblock %}
 
 {% block content %}
-    {% csrf_token %}
     <div class="container">
-        {% if user.is_authenticated %}
-            <h2>Welcome {{ user.username }}</h2>
-        {% else %}
-            <h2>Welcome to the site</h2>
-        {% endif %}
+        <h1>welcome {{ user.username }}</h1>
     </div>
 {% endblock %}
