@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, render_to_response
 from .forms import RegistrationForm, UserProfileForm, LoginForm
-# from django.core.urlresolvers import reverse
+from django.core.urlresolvers import reverse
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
 from django.http import HttpResponseRedirect, HttpResponse
@@ -75,11 +75,14 @@ def login_view(request):
                 # Check it the account is active
                 if user.is_active:
                     # Log the user in.
+                    user.backend = 'django.contrib.auth.backends.ModelBackend'
                     login(request, username)
                     # Send the user back to some page.
                     # In this case their homepage.
                     # return HttpResponseRedirect(reverse('/user_login/'))
-                    return render_to_response('user_login.html', RequestContext(request, {}))
+                    args = {'user': username}
+                    head_list.update(args)
+                    return render(request, 'user_profile.html', head_list)
                 else:
                     # If account is not active:
                     return HttpResponse("Your account is not active.")
@@ -94,3 +97,8 @@ def login_view(request):
         head_list.update(args)
         # Nothing has been provided for username or password.
         return render(request, 'login.html', head_list)
+
+
+def user_profile(request):
+    print('user after login', User.username)
+    return render(request, 'user_profile.html', head_list)

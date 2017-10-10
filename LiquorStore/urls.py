@@ -28,10 +28,7 @@ urlpatterns = [
     url(r'^home/', home),
     url(r'^locate/', location_view),
     url(r'^register/', register, name='register'),
-    # url(r'^user/login/', login_view, name='login'),
     url(r'^user/login/', login_view, name='login'),
-    url(r'^user_login/', login_view, name='user_login'),
-    # url(r'^reg_success/', register_success),
-    # url(r'^user_login/$', login, {'template_name': 'user_login.html'}),
+    url(r'^user_profile/', user_profile, name='user_profile'),
     url(r'^admin/', include(admin.site.urls)),
     ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
