@@ -9,6 +9,7 @@ from LiquorStore.settings import BASE_DIR
 import os
 from .models import UserProfile
 from django.template.context_processors import csrf
+from django.contrib.auth.decorators import login_required
 from django.template import RequestContext
 # from django.contrib.auth.hashers import make_password
 
@@ -63,9 +64,6 @@ def login_view(request):
         if form.is_valid():
             username = form.cleaned_data.get('username')
             password = form.cleaned_data.get('password')
-            # First get the username and password supplied
-            # username = request.POST.get('username', '')
-            # password = request.POST.get('password', '')
             # Django's built-in authentication function:
             print(username, password)
             user = authenticate(username=username, password=password)
@@ -99,6 +97,7 @@ def login_view(request):
         return render(request, 'login.html', head_list)
 
 
-def user_profile(request):
-    print('user after login', User.username)
+@login_required()
+def user_profile(request, username):
+    print('user after login')
     return render(request, 'user_profile.html', head_list)
