@@ -19,7 +19,7 @@ from django.conf import settings
 from .views import *
 from django.conf.urls import url
 
-app_name = 'account'
+app_name = 'Accounts'
 urlpatterns = [
     url(r'^register/', register, name='register'),
     url(r'^login/', login_view, name='login'),

@@ -13,15 +13,10 @@
     <h1>LiquorApp Login Console</h1>
         <div class="login">
             <h1>Login to WebApp</h1>
-            <form method="post" action="/accounts/user_profile/">
+            <form method="post" enctype="multipart/form-data" action="/accounts/user_profile/">
                 {% csrf_token %}
                 {{ form.as_p }}
-                {% comment %}Username: <input type="text" name="username" value="" size="50" />
-                <br />{% endcomment %}
-                {% comment %}<p><input type="text" name="username" value="" id="username" placeholder="username"></p>
-                <p><input id ="password" type="password" name="password" value="" placeholder="password"></p>
-                <p class="remember_me">{% endcomment %}
-                  <label>
+                <label>
                     <input type="checkbox" name="remember_me" id="remember_me">
                     Remember me on this computer
                   </label>
