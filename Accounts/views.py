@@ -1,19 +1,13 @@
 from django.shortcuts import render, redirect, render_to_response
-from django.contrib import messages
-from django.contrib.messages import get_messages
 from .forms import RegistrationForm, UserProfileForm, LoginForm
 from django.core.urlresolvers import reverse
-from django.contrib.auth import authenticate, login, logout, get_user_model
-# from django.contrib.auth.models import User
-from django.http import HttpResponseRedirect, HttpResponse
+from django.contrib.auth import authenticate, login, logout
 from LiqourApp.views import read_file
 from LiquorStore.settings import BASE_DIR
 import os
-# from .models import UserProfile
-from django.template.context_processors import csrf
 from django.contrib.auth.decorators import login_required
 # from django.template import RequestContext
-# from django.contrib.auth.hashers import make_password
+
 
 fp = os.path.join(BASE_DIR, 'LiqourApp\static\\appdata\menubar.txt')
 head_list = read_file(fp)
@@ -36,6 +30,7 @@ def register(request):
             profile.email = user.email
             profile.first_name = user.first_name
             profile.last_name = user.last_name
+            print(profile_form)
             if 'profile_pic' in request.FILES:
                 profile.profile_pic = request.FILES['profile_pic']
                 print('uploading pic .....')
@@ -59,17 +54,20 @@ def register(request):
 
 
 def login_view(request):
-    print(request.user.is_authenticated())
+    # print(request.user.is_authenticated())
     next = request.GET.get('next')
     form = LoginForm(request.POST or None)
+    print(form)
     if form.is_valid():
+        print('How are You i am in form validation')
         username = form.cleaned_data.get("username")
         password = form.cleaned_data.get("password")
         user = authenticate(username=username, password=password)
         login(request, user)
+
         if next:
             return redirect(next)
-        print(request.user.is_authenticated)
+        print('I am User:', request.user.is_authenticated)
     args = {'form': form}
     head_list.update(args)
     return render(request, 'login.html', head_list)

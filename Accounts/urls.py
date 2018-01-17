@@ -19,9 +19,10 @@ from django.conf import settings
 from .views import *
 from django.conf.urls import url
 
+
 app_name = 'Accounts'
 urlpatterns = [
     url(r'^register/', register, name='register'),
     url(r'^login/', login_view, name='login'),
-    url(r'^user_profile/$', user_profile, name="user_profile"),
+    url(r'^user_profile/', user_profile, name="user_profile"),
     ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
