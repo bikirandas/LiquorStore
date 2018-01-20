@@ -16,7 +16,7 @@
       <sourceFolder url="file://$MODULE_DIR$/LiqourApp/templates" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Accounts/templates" isTestSource="false" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 3.6.0 virtualenv at C:\Users\Rony\RonyPython" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.6.0 (C:\Python\Python36\python.exe)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="Python Projects" />
   </component>
@@ -24,7 +24,8 @@
     <option name="TEMPLATE_CONFIGURATION" value="Django" />
     <option name="TEMPLATE_FOLDERS">
       <list>
-        <option value="$MODULE_DIR$/../LiquorStore\templates" />
+        <option value="$MODULE_DIR$/templates" />
+        <option value="$MODULE_DIR$/templates/registration" />
       </list>
     </option>
   </component>

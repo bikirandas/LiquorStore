@@ -21,12 +21,13 @@ from django.conf import settings
 from Accounts.views import *
 from django.contrib.auth.views import login
 
+
 app_name = 'Accounts'
 urlpatterns = [
     # url(r'^', views.index, name='index'),
     url(r'^$', index),
     url(r'^home/', home),
     url(r'^locate/', location_view),
-    url(r'^accounts/', include('Accounts.urls')),
+    url(r'^accounts/', include('registration.backends.hmac.urls')),
     url(r'^admin/', include(admin.site.urls)),
     ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

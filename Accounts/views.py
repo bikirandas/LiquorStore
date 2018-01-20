@@ -37,20 +37,20 @@ def register(request):
             profile.save()
             args = {'reg_form': reg_form, 'profile_form': profile_form, 'registered': True}
             head_list.update(args)
-            return render(request, 'registration.html', head_list)
+            return render(request, 'registration_form.html', head_list)
 
         else:
             print(reg_form.errors, profile_form.errors)
             args = {'reg_form': reg_form.errors, 'profile_form': profile_form.errors, 'registered': False}
             head_list.update(args)
-            return render(request, 'registration.html', head_list, args)
+            return render(request, 'registration_form.html', head_list, args)
     else:
         reg_form = RegistrationForm()
         profile_form = UserProfileForm()
         args = {'reg_form': reg_form, 'profile_form': profile_form, 'registered': False}
         head_list.update(args)
         print(head_list)
-        return render(request, 'registration.html', head_list)
+        return render(request, 'registration_form.html', head_list)
 
 
 def login_view(request):
