@@ -1,6 +1,13 @@
-{% extends "base.html" %}
+{% extends '__header.html' %}
+{% load staticfiles %}
+{% load static %}
+{# Load the tag library #}
+{% load bootstrap3 %}
+{% block stylesheet %}
+    <link href="{% static 'css/home.css' %}" rel="stylesheet"/>
+    <link href="{% static 'css/registration.css' %}" rel="stylesheet"/>
+{% endblock %}}
 {% load i18n %}
-
 {% block content %}
 
 <p>{% trans "Account activation failed" %}</p>

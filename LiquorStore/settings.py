@@ -36,12 +36,13 @@ INSTALLED_APPS = [
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
+    'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'LiqourApp',
     'bootstrap3',
     'Accounts',
-
+    'registration',
     ]
 
 MIDDLEWARE_CLASSES = [
@@ -98,7 +99,8 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'Liquor.db'),
     }
 }
-
+# Django registration Settings
+#
 ACCOUNT_ACTIVATION_DAYS = 7
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators

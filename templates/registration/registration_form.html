@@ -12,12 +12,17 @@
 {% block content %}
     <div id="login-box">
         <div class ="left">
+            {% if registered %}
+                <h1>Thanks you for Registration</h1>
+
+            {% else %}
             <form method="post" action=".">
             {% csrf_token %}
             {{ reg_form.as_p }}
             {{ profile_form.as_p }}
-            <input type="submit" value="{% trans 'Submit' %}" />
+            <button type="submit">Submit</button>
             </form>
+            {% endif %}
         </div>
         <div class="right">
             <span class="loginwith">Sign in with<br />social network.....</span>

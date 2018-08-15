@@ -1,13 +1,14 @@
 from django import forms
 from django.contrib.auth.models import User
 from .models import UserProfile
-from django.contrib.auth.forms import UserCreationForm
+# from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import (authenticate, get_user_model)
+from registration.forms import RegistrationForm
 
 user_crrnt = get_user_model()
 
 
-class RegistrationForm(UserCreationForm):
+class CustomRegistration(RegistrationForm):
     # password = forms.CharField(widget=forms.PasswordInput())
 
     class Meta:
@@ -17,7 +18,7 @@ class RegistrationForm(UserCreationForm):
 
     # Remove help text from registration form
     def __init__(self, *args, **kwargs):
-        super(RegistrationForm, self).__init__(*args, **kwargs)
+        super(CustomRegistration, self).__init__(*args, **kwargs)
 
         for fieldname in ['username', 'password1', 'password2']:
             self.fields[fieldname].help_text = None

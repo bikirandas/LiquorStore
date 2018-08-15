@@ -19,15 +19,17 @@ from LiqourApp.views import index, home, location_view
 from django.conf.urls.static import static
 from django.conf import settings
 from Accounts.views import *
-from django.contrib.auth.views import login
+
+from Accounts.forms import *
 
 
 app_name = 'Accounts'
 urlpatterns = [
     # url(r'^', views.index, name='index'),
     url(r'^$', index),
+    url(r'^admin/', include(admin.site.urls)),
     url(r'^home/', home),
     url(r'^locate/', location_view),
+    url(r'^accounts/register/', register, name='register'),
     url(r'^accounts/', include('registration.backends.hmac.urls')),
-    url(r'^admin/', include(admin.site.urls)),
     ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
